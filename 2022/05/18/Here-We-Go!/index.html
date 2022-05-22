@@ -14,7 +14,7 @@
 
 
 
-<title>Here We Go | Hexo</title>
+<title>Here We Go! | Hexo</title>
 
 
 
@@ -98,7 +98,7 @@
         <div class="post-title">
             
             
-                Here We Go
+                Here We Go!
             
             
         </div>
@@ -118,7 +118,7 @@
 <p>Due to the fact that there are multiple audio plugin frameworks available and in the aim of reusability, the DSP side of the library will be written in pure C++ with no other libraries apart from the STL required. While I did initially intend to make this a C library, it has become apparent that this approach was slowing progress too much. However, I will try to write as much of the code so that it compiles to C as possible.</p>
 <p>As I am using JUCE as the framework to create my audio plugins I am also going to have a library of code that relies on JUCE. This will include things like generic preset management code and some shared GUI components. These parts of the library will be kept seperate so that the DSP code can be used in conjunction with other frameworks and the JUCE side of the library may, at some point, be put in a seperate library of its own.</p>
 <h3 id="The-Plugin-As-yet-untitled"><a href="#The-Plugin-As-yet-untitled" class="headerlink" title="The Plugin - As yet untitled"></a>The Plugin - As yet untitled</h3><p>As a DSP library is fairly useless (and untestable) without an application to put audio through it and play with parameters, I am also creating a multi effect plugin. This will act as a test suite for my DSP code and will hopefully be alot of fun to use! I’ll be creating seperate plugins when I have ideas for one but this will act as an up to date preview of the LLDSP library and may grow to include some added debug tools as I see fit.</p>
-<h3 id="Debugging-As-yet-really-thought-out"><a href="#Debugging-As-yet-really-thought-out" class="headerlink" title="Debugging - As yet really thought out"></a>Debugging - As yet really thought out</h3><p>The final (and least thought out) part of the LLDSP project is a suite of tools to help debug audio applications. While doing work on previous audio software projects and starting LLDSP it has become apparent that debugging audio applications has it’s own set of niche problems. To this end, I want to create a set of tools contating an oscilliscope, spectrum analyzer, and wave shaping graph to help visualize what is going on behind the scenes. I have not yet begun work on this part of the project but the current idea in my head is to use the Imgui library to create these tools. I don’t know how I will marry Imgui with JUCE or how the code will even work but it seems clear to me that some debug tools will be essential down the road.</p>
+<h3 id="Debugging-As-yet-really-thought-out"><a href="#Debugging-As-yet-really-thought-out" class="headerlink" title="Debugging - As yet really thought out"></a>Debugging - As yet really thought out</h3><p>The final (and least thought out) part of the LLDSP project is a suite of tools to help debug audio applications. While doing work on previous audio software projects and starting LLDSP it has become apparent that debugging audio applications has it’s own set of niche problems. To this end, I want to create a set of tools contating an oscilliscope, spectrum analyzer, and wave shaping graph to help visualize what is going on behind the scenes. I have not yet begun work on this part of the project but the current idea is to create a set of JUCE components that will be be visible if a macro is present.</p>
 <h3 id="Wish-Me-Luck"><a href="#Wish-Me-Luck" class="headerlink" title="Wish Me Luck!"></a>Wish Me Luck!</h3><p>I’m hoping to write here regularly (as life permits) with any interesting things I learn along the way. I have already got some DSP basics like a ring buffer and simple distortion done along with some GUI assets made but there’s alot more to be done!</p>
 <p>For now my To-Do list looks like so:</p>
 <ul>
