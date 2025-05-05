@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="LLDSP is starting to become useful. I have been (very) slowly adding to it and I now have a fun little toolbox of DSP elements that are in a semi usable state! While I have been making a few toys with">
+    <meta name="description" content="LLDSP is starting to become useful. I have been (very) slowly adding to it and I now have a fun little toolbox of DSP elements that are in a semi usable state! While I have been making a few toys wit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FM Synth - V1">
 <meta property="og:url" content="https://hamishdelap.github.io/2025/05/05/FM%20Synth/index.html">
 <meta property="og:site_name" content="Hamish Delap">
-<meta property="og:description" content="LLDSP is starting to become useful. I have been (very) slowly adding to it and I now have a fun little toolbox of DSP elements that are in a semi usable state! While I have been making a few toys with">
+<meta property="og:description" content="LLDSP is starting to become useful. I have been (very) slowly adding to it and I now have a fun little toolbox of DSP elements that are in a semi usable state! While I have been making a few toys wit">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hamishdelap.github.io/images/modula-design.png">
 <meta property="og:image" content="https://hamishdelap.github.io/images/modulaV1.png">
 <meta property="article:published_time" content="2025-05-05T17:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-05T15:49:27.564Z">
+<meta property="article:modified_time" content="2025-05-05T15:57:15.727Z">
 <meta property="article:author" content="Hamish Delap">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hamishdelap.github.io/images/modulaV1.png">
+<meta name="twitter:image" content="https://hamishdelap.github.io/images/modula-design.png">
     
     
       
@@ -143,7 +144,8 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <p><a target="_blank" rel="noopener" href="https://github.com/HamishDelap/LetsLearnDSP">LLDSP</a> is starting to become useful. I have been (very) slowly adding to it and I now have a fun little toolbox of DSP elements that are in a semi usable state! While I have been making a few toys with it (see <a target="_blank" rel="noopener" href="https://github.com/HamishDelap/Trakr">Trakr</a> and the LLDSP test multi FX), I thought it was about time to attempt to make something more polished. This means no weird UI quirks, no ear shattering audio glitches, and most importantly no unexpected crashes!</p>
+    <p><img src="/images/modula-design.png" alt="Modula Designs" title="Modula"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/HamishDelap/LetsLearnDSP">LLDSP</a> is starting to become useful. I have been (very) slowly adding to it and I now have a fun little toolbox of DSP elements that are in a semi usable state! While I have been making a few toys with it (see <a target="_blank" rel="noopener" href="https://github.com/HamishDelap/Trakr">Trakr</a> and the LLDSP test multi FX), I thought it was about time to attempt to make something more polished. This means no weird UI quirks, no ear shattering audio glitches, and most importantly no unexpected crashes!</p>
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Enter the FM Synthesizer. Since my university dissertation, a 4 operator FM synthesizer written using JUCE, i’ve enjoyed playing around with FM synthesis and the rich timbres it can produce. While my original synth had some fun elements, I like to think I have come along way. The code was a horrible mess of C++ as I was self-teaching myself it at the time and while the FM engine worked, it was far from performant and would regularly create audio glitches and dropouts. </p>
 <p>But as bad as the code may have been, it was fun! My inspiration was an FKJ YouTube video where he used an envelope for pitch on a rich pad and I had incorporated that into the synth. I knew I could create rich and interesting sounds with it but it was far from easy to find those sounds. Each knob was a simple linear 0 -&gt; x range with no consideration for what a user might actually want to do. The UI was layed out clearly but with little regard for how each element fit into the wider system. All in all it was just too much work to get a usable sound out of it, much less a nice one.</p>
 <h2 id="What-Have-I-Done"><a href="#What-Have-I-Done" class="headerlink" title="What Have I Done?"></a>What Have I Done?</h2><p>Modula, as I am currently calling it, is coming along nicely. I’ve opted for the most basic implementation possible. 1 modulator and 1 carrier. Both of the operators share the same waveform and each voice has an envelope for the carrier and filter cutoff. Finally all voices lead into a distortion and my Shroeder reverb.</p>
